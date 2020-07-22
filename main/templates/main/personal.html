@@ -1,0 +1,22 @@
+{% extends "layout/basic.html" %}
+
+{% block title %}Личные данные{% endblock %}
+{% block account %}
+<div class="container-fluid px-lg-5">
+
+    <div class="row">
+        <div class="col" style="background-color: #ffffff; border-radius: 5px;">
+            <div class="" style="margin-left: auto; margin-right: auto; width: auto;">
+                <h5>Персональные данные</h5>
+
+                <p>Логин: <br> {{ user.username }}</p>
+                <p>Имя: <br> {{ user.first_name }}</p>
+                <p>Фамилия: <br> {{ user.last_name }}</p>
+                <p>E-mail: <br> {{ user.email }}</p>
+                <a href="{% url 'main:profile_change' %}">Редактировать</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layout/basic.html" %}
+{% load bootstrap4 %}
+{% block title %}Создание сделки{% endblock %}
+{% block account %}
+
+<div class="container-fluid px-lg-5">
+
+    <div class="row w-100">
+        <div class="col-md-">
+            <div class="" style="border-radius: 5px; background-color: #ffffff; padding: 5%;">
+            <h5>Информация о сделке</h5>
+            <!--            </div>-->
+            <!--            <div class="card-body">-->
+            <br>
+            <form method="post" >
+                {% csrf_token %}
+            <!--    <table>-->
+            <!--    {{ form }}-->
+            <!--    </table>-->
+            <!--    <input type="submit" value="Добавить">-->
+                    {% bootstrap_form form layout='horizontal' %}
+                <hr>
+                <button type="submit" class="btn btn-secondary">Создать сделку</button>
+            </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
